@@ -13,6 +13,7 @@ public class Arm : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 0;
     }
 }
