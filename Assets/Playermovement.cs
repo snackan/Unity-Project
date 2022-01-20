@@ -25,11 +25,13 @@ public class Playermovement : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
     Animator m_Animator;
+    [SerializeField]
+    GameObject rotateFocus;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        m_Animator = gameObject.GetComponent<Animator>();
+        m_Animator = FindObjectOfType<Animator>();
     }
 
     // Update is called once per frame
@@ -38,16 +40,19 @@ public class Playermovement : MonoBehaviour
 
         if (Input.GetKey(down))
         {
+           
             transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
             //print("Hej mamma");
         }
         if (Input.GetKey(left))
         {
+
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
             //print("Hej mamma");
         }
         if (Input.GetKey(right))
         {
+
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             //print("Hej mamma");
         }
@@ -65,6 +70,7 @@ public class Playermovement : MonoBehaviour
 
             if (jumpTimeCounter > 0)
             {
+                m_Animator.SetTrigger("Jump");
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             }
@@ -73,24 +79,6 @@ public class Playermovement : MonoBehaviour
                 isJumping = false;
             }
 
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-        }
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            //Send the message to the Animator to activate the trigger parameter named "Jump"
-            m_Animator.SetTrigger("Jump");
-        }
-
-
-
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            //Reset the "Jump" trigger
-            m_Animator.ResetTrigger("Jump");
-
-            
-        }
+        
     }
 }
