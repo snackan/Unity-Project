@@ -39,20 +39,20 @@ public class Playermovement : MonoBehaviour
         if (Input.GetKey(down))
         {
             transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
-            print("Hej mamma");
+            //print("Hej mamma");
         }
         if (Input.GetKey(left))
         {
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
+            //print("Hej mamma");
         }
         if (Input.GetKey(right))
         {
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
+            //print("Hej mamma");
         }
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
+        
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
