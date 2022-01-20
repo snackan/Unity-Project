@@ -46,13 +46,13 @@ public class Playermovement : MonoBehaviour
         }
         if (Input.GetKey(left))
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
             print("Hej mamma");
         }
         if (Input.GetKey(right))
         {
-            rotateFocus.transform.rotation = Quaternion.Euler(0, 0, 0);
+
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             print("Hej mamma");
         }
