@@ -24,10 +24,6 @@ public class Shoot : MonoBehaviour
             Instantiate(skottes, transform.position + transform.up, transform.rotation);
             print("Hej mamma");
         }
-        if (Input.GetKey(shoots))
-        {
-            transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
-        }
+
     }
 }

@@ -29,7 +29,6 @@ public class Playermovement : MonoBehaviour
     [SerializeField]
     GameObject rotateFocus;
     public Animator animator;
-    public float runSpeed = 40f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,27 +40,27 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizantolMove = Input.GetAxisRaw
+
         if (Input.GetKey(down))
         {
            
             transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
-            print("Hej mamma");
+            //print("Hej mamma");
         }
         if (Input.GetKey(left))
         {
 
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
+            //print("Hej mamma");
         }
         if (Input.GetKey(right))
         {
 
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
+            //print("Hej mamma");
         }
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
+        
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
@@ -82,10 +81,7 @@ public class Playermovement : MonoBehaviour
             {
                 isJumping = false;
             }
-        Animator.SetFloat("walking speed", )
-            
 
-        
 
         
     }
