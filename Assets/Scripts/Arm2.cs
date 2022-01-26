@@ -1,15 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Arm2 : MonoBehaviour
 {
-    
+
+    /*public event EventHandler<OnShootEventargs> OnShoot;
+    public class OnShootEventargs : EventArgs
+    {
+        public Vector3 gunEndPointPosition;
+        public Vector3 shootPosition;
+    }
+    private Transform aimGunEndPointTransform;*/
+
+
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        /*aimGunEndPointTransform = aimGunEndPointTransform.Find("GunEndPointPosition");*/
+    }
+    private void Update()
+    {
+        /*HandlesShooting();*/
     }
 
     // Update is called once per frame
@@ -23,13 +37,23 @@ public class Arm2 : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ);
     }
 
-
-
-
-
-
-    void Update()
+    private void HandleAiming()
     {
-        
+        /*Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();*/
+
     }
+
 }
+    /*private void HandlesShooting()
+    {
+       /* if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
+            OnShoot?.Invoke(this, new OnShootEventargs
+            {
+                gunEndPointPosition = aimGunEndPointTransform.position,
+                shootPosition = mousePosition,
+            }) ;*/
+       /* }
+    }*/
+
