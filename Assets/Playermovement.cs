@@ -41,7 +41,7 @@ public class Playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizantolMove = Input.GetAxisRaw
+       // horizantolMove = Input.GetAxisRaw
         if (Input.GetKey(down))
         {
            
@@ -70,6 +70,7 @@ public class Playermovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping == true)
+        {
 
 
             if (jumpTimeCounter > 0)
@@ -82,7 +83,8 @@ public class Playermovement : MonoBehaviour
             {
                 isJumping = false;
             }
-        Animator.SetFloat("walking speed", )
+        }
+       // Animator.SetFloat("walking speed", )
             
 
         

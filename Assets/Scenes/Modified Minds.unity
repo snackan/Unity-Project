@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 245142353}
   - component: {fileID: 245142352}
   - component: {fileID: 245142351}
-  - component: {fileID: 245142355}
   - component: {fileID: 245142356}
+  - component: {fileID: 245142357}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -259,7 +259,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &245142355
+--- !u!114 &245142356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245142350}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeea7d3f53db99d4381f6f7db389e26e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 100
+  startDashTime: 0.1
+--- !u!114 &245142357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,7 +282,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 245142350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57b6cc84c5d34147af0332fbf7914b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c4c0a0752c369946aa7486e5619b377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.3
@@ -284,21 +298,8 @@ MonoBehaviour:
     m_Bits: 8
   jumpTime: 0.35
   rotateFocus: {fileID: 0}
-  animator: {fileID: 2089224764}
---- !u!114 &245142356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245142350}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeea7d3f53db99d4381f6f7db389e26e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dashSpeed: 100
-  startDashTime: 0.1
+  animator: {fileID: 0}
+  runSpeed: 40
 --- !u!1 &261939337
 GameObject:
   m_ObjectHideFlags: 0
