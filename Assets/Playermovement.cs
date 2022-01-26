@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Playermovement : MonoBehaviour
 {
+    
     [SerializeField, Range(1, 10)]
     float speed;
     [SerializeField]
@@ -27,6 +28,8 @@ public class Playermovement : MonoBehaviour
     Animator m_Animator;
     [SerializeField]
     GameObject rotateFocus;
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +81,7 @@ public class Playermovement : MonoBehaviour
             {
                 isJumping = false;
             }
+
 
         
     }
