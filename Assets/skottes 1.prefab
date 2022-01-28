@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1374282491314378166}
   - component: {fileID: 984290113793551602}
-  - component: {fileID: -944650339112118567}
-  - component: {fileID: 435883374000775166}
+  - component: {fileID: -8190868634738227827}
+  - component: {fileID: 6775760953549319615}
   m_Layer: 0
   m_Name: skottes 1
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-944650339112118567
+--- !u!114 &-8190868634738227827
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  rb: {fileID: 435883374000775166}
---- !u!50 &435883374000775166
+  rb: {fileID: 6775760953549319615}
+--- !u!50 &6775760953549319615
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
