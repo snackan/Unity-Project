@@ -22,7 +22,9 @@ public class Playermovement : MonoBehaviour
     public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
+    [SerializeField]
     private float jumpTimeCounter;
+    [SerializeField]
     public float jumpTime;
     private bool isJumping;
     Animator m_Animator;
@@ -64,6 +66,7 @@ public class Playermovement : MonoBehaviour
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
+            print("ground jump");
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
@@ -75,14 +78,20 @@ public class Playermovement : MonoBehaviour
 
             if (jumpTimeCounter > 0)
             {
+                print("continue jump");
                 m_Animator.SetTrigger("Jump");
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
             {
+                print("nej jump");
                 isJumping = false;
             }
+        }
+        else
+        {
+            isJumping = false;
         }
        // Animator.SetFloat("walking speed", )
             
