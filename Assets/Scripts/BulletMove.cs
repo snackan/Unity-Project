@@ -1,3 +1,4 @@
+//Snäckan
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class BulletMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Fortsätt flytta skottet i rätt håll.
         rb.velocity = transform.right * speed;
     }
 }
