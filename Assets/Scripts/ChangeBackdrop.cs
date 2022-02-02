@@ -1,3 +1,4 @@
+//Snäckan
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class ChangeBackdrop : MonoBehaviour
     GameObject player;
 
 
-    //When the backdrop is not in use, send it to brazil
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +32,11 @@ public class ChangeBackdrop : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Vid en kollision kommer bakgrunderna att bytas. Backdrop1 är den som man redan har, och backdrop2 är den som kommer komma upp när man går in i en kollision
+        //"brazil" är bara stället som bakgrunden som byts ut går till.
         backdrop1.transform.position = brazil;
 
+        //Den nya backdropen kommer till spelaren och eftersom att den är parentad till spelaren följer den efter.
         backdrop2.transform.position = player.transform.position;
     }
 }
