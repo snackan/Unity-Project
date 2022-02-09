@@ -21,14 +21,17 @@ public class Checkpoint : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("hifwfiwe");
         if (collision.gameObject.tag == "Checkpoint")
         {
+            print("hifwfiwe");
             checkpointPos = collision.gameObject.transform.position;
         }
         if (collision.gameObject.tag == "Dödablocken")
         {
+            print("hifwfiwe");
             player.transform.position = checkpointPos;
         }
     }
