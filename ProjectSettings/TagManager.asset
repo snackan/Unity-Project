@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - PlayerProjectile
   - Arm
+  - Checkpoint
+  - "D\xF6dablocken"
   layers:
   - Default
   - TransparentFX

@@ -25,7 +25,7 @@ public class Checkpoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,11 +43,11 @@ public class Checkpoint : MonoBehaviour
             cam.transform.position = cameraTargetPos;
 
 
-                
+
         }
         if (collision.gameObject.tag == "CameraTargetSet")
         {
-
+            cam.transform.position = setcameratargetpos.campostarget;
         }
     }
 }
