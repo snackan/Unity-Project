@@ -40,7 +40,7 @@ public class Checkpoint : MonoBehaviour
         {
             print("hifwfiwe");
             player.transform.position = checkpointPos + new Vector3(0, offsetY, 0);
-            cam.transform.position = cameraTargetPos;
+         
 
 
 
