@@ -31,11 +31,13 @@ public class Checkpoint : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print("hifwfiwe");
+        //Om spelaren nuddar en checkpoint sparar den Checkpoint positionen.
         if (collision.gameObject.tag == "Checkpoint")
         {
             print("hifwfiwe");
             checkpointPos = collision.gameObject.transform.position;
         }
+        //Om spelaren nuddar ett dödarblock (t.ex ramlar ner) kommer spelaren att tas tillbaka till checkpointen.
         if (collision.gameObject.tag == "Dödablocken")
         {
             print("hifwfiwe");

@@ -12698,7 +12698,7 @@ MonoBehaviour:
   camera_: {fileID: 1623255344}
   player: {fileID: 2096468147}
   newCampos: {x: 99.2, y: 0.05, z: -10}
-  newPlayerPos: {x: 0, y: 0, z: 0}
+  newPlayerPos: {x: 29.351, y: 7.31, z: -0.29}
   applyTo: Player
 --- !u!1 &985841761
 GameObject:
