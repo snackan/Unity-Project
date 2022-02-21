@@ -152,9 +152,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 9449348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57b6cc84c5d34147af0332fbf7914b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c4c0a0752c369946aa7486e5619b377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2.73
+  up: 32
+  down: 257
+  left: 274
+  right: 276
+  jumpForce: 20
+  feetPos: {fileID: 0}
+  checkRadius: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpTimeCounter: 0
+  jumpTime: 0
+  rotateFocus: {fileID: 0}
+  animator: {fileID: 0}
+  runSpeed: 40
 --- !u!50 &9449350
 Rigidbody2D:
   serializedVersion: 4
