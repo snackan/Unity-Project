@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Playermovement : MonoBehaviour
 {
-    
+    // Hela den här koden är gjord av Mickael 
+     // det här är det som min kod revolverar kring
+     
     [SerializeField, Range(1, 10)]
     float speed;
     [SerializeField]
@@ -15,6 +17,7 @@ public class Playermovement : MonoBehaviour
     KeyCode left;
     [SerializeField]
     KeyCode right;
+    // Dem ovanför är variablar jag sätter självaste koden till karaktärens rörelse. och i unity bestämmer hur snabbt gubben går och vilka knappar som varje rörelse hör till.
     bool isGrounded = true;
     [SerializeField]
     private float jumpForce;
@@ -22,6 +25,7 @@ public class Playermovement : MonoBehaviour
     public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
+    // Dem ovanför här är för att säga vad som är mark hur starkt hoppet ska vara och positionen på gubben som marken kommer i kontakt med.
     [SerializeField]
     private float jumpTimeCounter;
     [SerializeField]
@@ -32,7 +36,7 @@ public class Playermovement : MonoBehaviour
     GameObject rotateFocus;
     public Animator animator;
     public float runSpeed = 40f;
-
+    // Dem ovanför här är för att kolla hur länge hoppet ska ske, när gubben hoppar, ett ställe att setta koden för animationerna och räkna tiden det tar att hoppa.
     // Start is called before the first frame update
     void Start()
     {
@@ -48,19 +52,24 @@ public class Playermovement : MonoBehaviour
         {
            
             transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
-            print("Hej mamma");
+            print("Hej Mickael");
         }
         if (Input.GetKey(left))
         {
-
+            m_Animator.SetFloat("walking speed", speed);
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
+            print("Hej Mickael");
         }
-        if (Input.GetKey(right))
+        else if (Input.GetKey(right))
         {
-
+            m_Animator.SetFloat("walking speed", speed);
+            
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
-            print("Hej mamma");
+            print("Hej Mickael");
+        }
+        else
+        {
+            m_Animator.SetFloat("walking speed", 0);
         }
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 

@@ -53,7 +53,7 @@ public class DashMove : MonoBehaviour
             dashtTime = startDashTime;
             //rb.velocity = Vector2.zero;
         }
-        else
+       /* else
         {
             dashtTime -= Time.deltaTime;
 
@@ -73,7 +73,7 @@ public class DashMove : MonoBehaviour
             {
                 rb.velocity = Vector2.down * dashSpeed;
             }
-        }
+        } */
 
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = 5;
