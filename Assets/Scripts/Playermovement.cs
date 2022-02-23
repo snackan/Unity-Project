@@ -50,30 +50,33 @@ public class Playermovement : MonoBehaviour
        // horizantolMove = Input.GetAxisRaw
         if (Input.GetKey(down))
         {
-           
+           // den här koden flyttar spelaren till den position som beffiner sig i -y.
             transform.position += new Vector3(0, -speed, 0) * Time.deltaTime;
             print("Hej Mickael");
         }
         if (Input.GetKey(left))
         {
+            // Den här koden startar en animation när spelarens position är mot x och hastighet över noll.
             m_Animator.SetFloat("walking speed", speed);
+            // den här koden flyttar spelaren till den position som beffiner sig i -x.
             transform.position += new Vector3(-speed, 0, 0) * Time.deltaTime;
             print("Hej Mickael");
         }
         else if (Input.GetKey(right))
         {
+            // Den här koden startar en animation när spelarens position är mot x och hastighet över noll.
             m_Animator.SetFloat("walking speed", speed);
-            
+            // den här koden flyttar spelaren till den position som beffiner sig i x.
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
             print("Hej Mickael");
         }
         else
         {
-            m_Animator.SetFloat("walking speed", 0);
+            m_Animator.SetFloat("walking speed", 0);// Den här koden startar en animation när spelarens hastighet är över noll.
         }
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space)) // Den här kollar om spelaren är på marken om den är så ska man kunna man kunna trycka på space för att hoppa.
         {
             print("ground jump");
             isJumping = true;
@@ -81,7 +84,8 @@ public class Playermovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
 
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
+        if (Input.GetKey(KeyCode.Space) && isJumping == true) /* Den här koden ser till så att när spelaren trycker på space och inte håller ner space
+                                                               så blir det ett kortare hopp och den ser också till så att det inte funkar i luften.*/
         {
 
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DashMove : MonoBehaviour
 {
+    // DashMove koden ar gjord av Mickael men jag fick lite hjälp av Olle.
     private Rigidbody2D rb;
 
     public float dashSpeed;
@@ -12,13 +13,13 @@ public class DashMove : MonoBehaviour
     private int direction;
 
     public float speed;
-
+    // det här är variablarna som jag sätter farten på dashen kollar dem olika hållen dashen går och startar dashen.
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         dashtTime = startDashTime;
-    }
+    } // den här i princip startar dashen
 
     // Update is called once per frame
     void Update()
@@ -85,7 +86,7 @@ public class DashMove : MonoBehaviour
         {
             rb.velocity = -difference.normalized * speed;
         }
-
+        // Den här koden kollar musens position och skuter spelaren åt motsat håll när man högerklickar.
         
     }
 }
