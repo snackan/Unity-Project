@@ -37145,7 +37145,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  jumpTimeCounter: 0
+  jumpTimeCounter: 1
   jumpTime: 0.35
   rotateFocus: {fileID: 0}
   animator: {fileID: 0}
