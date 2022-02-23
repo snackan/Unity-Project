@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
   public void PlayGame()
     {
-        SceneManager.LoadScene("Modified Minds");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void QuitGame()
